@@ -3,16 +3,15 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
 
 import { useTRPC } from "@/trpc/client";
+import { DataTable } from "@/components/data-table";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
 import { EmptyState } from "@/components/empty-state";
 
-import { DataTable } from "../components/data-table";
 import { columns } from "../components/columns";
 import { useAgentsFilters } from "../../hooks/use-agents-filters";
 import { DataPagination } from "../components/data-pagination";
 import { useRouter } from "next/navigation";
-
 
 
 export const AgentsView = () => {
@@ -42,8 +41,7 @@ export const AgentsView = () => {
                     title="Create your first agent"
                     description="Create an agent to join your meetings. Each agent will follow your instructions and can interact with participants during the call"
                 />
-            )
-            }
+            )}
         </div>
     );
 };
